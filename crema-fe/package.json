@@ -5,7 +5,9 @@
   "dependencies": {
     "cors-anywhere": "^0.4.1",
     "react": "^16.8.6",
+    "react-compound-timer": "^1.0.12",
     "react-countdown-now": "^2.1.0",
+    "react-countup": "^4.1.3",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^2.1.8",

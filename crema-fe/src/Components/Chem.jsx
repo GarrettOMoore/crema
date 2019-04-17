@@ -1,23 +1,48 @@
 import React from 'react'
-import Countdown from 'react-countdown-now';
+import Timer from 'react-compound-timer'
 
 const Chem = (props) => {
-    const Complete = () => <span>Your Chemex is ready!</span>;
-    const renderer = ({ hours, minutes, seconds, completed }) => {
-        if (completed) {
-          // Render a complete state
-          return <Complete />;
-        } else {
-          // Render a countdown
-          return <span>{minutes}:{seconds}</span>;
-        }
-      };
+    let message = <span className='timer-instructions'>Start timer as soon as you add hot water.</span>  
     return(
         <>
-        <h1>Chemex</h1>
-        <h3>Start Timer</h3>
+        <h1 className='header'>Chemex</h1>
         <div className='timer'>
-        <Countdown date={Date.now() + 180000}renderer={renderer} />
+        <Timer startImmediately={false}
+            checkpoints={[
+                {
+                    time: 45000,
+                    callback: () => message = <span className='timer-instruction'>Start second pour.</span>,
+                },
+                {
+                    time: 105000,
+                    callback: () => message = <span className='timer-instruction'>Brewer should be filled to the top with water (~700g).</span>,
+                },
+                {
+                    time: 240000,
+                    callback: () => message = <span className='timer-instruction'>Your Chemex is finished! Remove filter, swirl & serve.</span>,
+                },
+                // {
+                //     time: 100000,
+                //     callback: stop(),
+                // }
+            ]}>
+         {({ start, pause, stop, reset, timerState }) => (
+        <>
+            <div className='timer'>
+                <Timer.Minutes />
+                <Timer.Seconds />
+            </div>
+            <br />
+            {message}
+            <div>
+                <button onClick={start}>Start</button>
+                <button onClick={pause}>Pause</button>
+                <button onClick={stop}>Stop</button>
+                <button onClick={reset}>Reset</button>
+            </div>
+        </>
+            )}
+        </Timer>
         </div>
         <div className='text-box'>
         <p className='step-num'>One: </p><p> Place the Chemex Filter in the brewer with single fold away from the spout and multiple folds lined up against the spout. Rinse the filter with hot water to get a nice even seal all the way around. This preheats the brewer and gets rid of any paper flavor from the filter. Dump the rinse water and fold the filter toward the spout to reinforce this area.</p>

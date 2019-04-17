@@ -1,24 +1,49 @@
 import React from 'react'
-import Countdown from 'react-countdown-now';
+import Timer from 'react-compound-timer'
 
 
 const French = (props) => {
-    const Complete = () => <span>Your French Press is ready!</span>;
-    const renderer = ({ hours, minutes, seconds, completed }) => {
-        if (completed) {
-          // Render a complete state
-          return <Complete />;
-        } else {
-          // Render a countdown
-          return <span>{minutes}:{seconds}</span>;
-        }
-      };
+    let message = <span className='timer-instructions'>Start timer as soon as you add hot water.</span>  
     return(
         <>
-        <h1>French Press</h1>
-        <h3>Start Timer</h3>
+        <h1 className='header'>French Press</h1>
         <div className='timer'>
-        <Countdown date={Date.now() + 180000}renderer={renderer} />
+        <Timer startImmediately={false}
+            checkpoints={[
+                {
+                    time: 60000,
+                    callback: () => message = <span className='timer-instruction'>Crack Crust and Stir!</span>,
+                },
+                {
+                    time: 70000,
+                    callback: () => message = <span className='timer-instruction'>Now We Wait</span>,
+                },
+                {
+                    time: 240000,
+                    callback: () => message = <span className='timer-instruction'>Your French Press is finished!</span>,
+                },
+                // {
+                //     time: 241000,
+                //     callback: stop()
+                // }
+            ]}>
+         {({ start, pause, stop, reset, timerState }) => (
+        <>
+            <div className='timer'>
+                <Timer.Minutes />
+                <Timer.Seconds />
+            </div>
+            <br />
+            <div className='timer-buttons'>
+                <button onClick={start}>Start</button>
+                <button onClick={pause}>Pause</button>
+                <button onClick={stop}>Stop</button>
+                <button onClick={reset}>Reset</button>
+            </div>
+            {message}
+        </>
+            )}
+        </Timer>
         </div>
         <div className='text-box'>
         <p className='step-num'>One: </p><p> Warm up your empty French Press by rinsing it with very hot water. This helps maintain the temperature while brewing for best extraction.</p>

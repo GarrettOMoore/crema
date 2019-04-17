@@ -1,23 +1,48 @@
 import React from 'react'
-import Countdown from 'react-countdown-now';
+import Timer from 'react-compound-timer'
 
 const Aero = (props) => {
-    const Complete = () => <span>Your Aeropress is ready!</span>;
-    const renderer = ({ hours, minutes, seconds, completed }) => {
-        if (completed) {
-          // Render a complete state
-          return <Complete />;
-        } else {
-          // Render a countdown
-          return <span>{minutes}:{seconds}</span>;
-        }
-      };
+    let message = <span className='timer-instructions'>Start timer as soon as you add hot water.</span>  
     return(
         <>
-        <h1>Aeropress</h1>
-        <h3>Start Timer</h3>
+        <h1 className='header'>Aeropress</h1>
         <div className='timer'>
-        <Countdown date={Date.now() + 180000}renderer={renderer} />
+        <Timer startImmediately={false}
+            checkpoints={[
+                {
+                    time: 75000,
+                    callback: () => message = <span className='timer-instruction'>Remove seal and stir.</span>,
+                },
+                {
+                    time: 80000,
+                    callback: () => message = <span className='timer-instruction'>Slowly start to press down plunger.</span>,
+                },
+                {
+                    time: 99000,
+                    callback: () => message = <span className='timer-instruction'>Your Aeropress is finished!</span>,
+                },
+                // {
+                //     time: 100000,
+                //     callback: stop(),
+                // }
+            ]}>
+         {({ start, pause, stop, reset, timerState }) => (
+        <>
+            <div className='timer'>
+                <Timer.Minutes />
+                <Timer.Seconds />
+            </div>
+            <br />
+            {message}
+            <div>
+                <button onClick={start}>Start</button>
+                <button onClick={pause}>Pause</button>
+                <button onClick={stop}>Stop</button>
+                <button onClick={reset}>Reset</button>
+            </div>
+        </>
+            )}
+        </Timer>
         </div>
         <div className='text-box'>
         <p className='step-num'>One: </p><p> Measure and grind 17g of coffee — one rounded AeroPress spoonful or about 2 ½ Tablespoons. Grind the coffee about as fine as table salt.</p>

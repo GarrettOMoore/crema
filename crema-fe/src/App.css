@@ -240,12 +240,24 @@ iframe{
 }
 
 .step-num {
-  font-size: 1.4em;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.8em;
   font-weight: bolder;
 }
 
 .timer {
   font-size: 4em;
+  margin-bottom: -2%;
+}
+
+.timer-instructions {
+  font-family: 'Amatic SC', cursive;
+  margin-bottom: 10%;
+  font-size: 0.8em;
+}
+
+.timer-buttons {
+  margin-top: -5%;
 }
 
 @media screen and (max-width: 600px) {

@@ -1,23 +1,49 @@
 import React from 'react'
-import Countdown from 'react-countdown-now';
+import Timer from 'react-compound-timer'
+
 
 const Pour = (props) => {
-    const Complete = () => <span>Your Pour Over is ready!</span>;
-    const renderer = ({ hours, minutes, seconds, completed }) => {
-        if (completed) {
-          // Render a complete state
-          return <Complete />;
-        } else {
-          // Render a countdown
-          return <span>{minutes}:{seconds}</span>;
-        }
-      };
+    let message = <span className='timer-instructions'>Start timer as soon as you add hot water.</span>  
     return(
         <>
-        <h1>Pour Over</h1>
-        <h3>Start Timer</h3>
+        <h1 className='header'>Pourover</h1>
         <div className='timer'>
-        <Countdown date={Date.now() + 180000}renderer={renderer} />
+        <Timer startImmediately={false}
+            checkpoints={[
+                {
+                    time: 10000,
+                    callback: () => message = <span className='timer-instruction'>Let it bloom.</span>,
+                },
+                {
+                    time: 45000,
+                    callback: () => message = <span className='timer-instruction'>Slowly pour 200g hot water in a spiral motion.</span>,
+                },
+                {
+                    time: 180000,
+                    callback: () => message = <span className='timer-instruction'>Your Pourover is finished!</span>,
+                },
+                // {
+                //     time: 100000,
+                //     callback: stop(),
+                // }
+            ]}>
+         {({ start, pause, stop, reset, timerState }) => (
+        <>
+            <div className='timer'>
+                <Timer.Minutes />
+                <Timer.Seconds />
+            </div>
+            <br />
+            {message}
+            <div>
+                <button onClick={start}>Start</button>
+                <button onClick={pause}>Pause</button>
+                <button onClick={stop}>Stop</button>
+                <button onClick={reset}>Reset</button>
+            </div>
+        </>
+            )}
+        </Timer>
         </div>
         <div className='text-box'>
         <p className='step-num'>One: </p><p> Place and rinse the filter in the dripper. This removes the paper flavor from the filter and warms everything up. Heat up your mug while you’re at it.</p>
