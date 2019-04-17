@@ -1,0 +1,289 @@
+.App {
+  text-align: center;
+}
+html { 
+  margin: 0;
+  padding: 0;
+  background: url('./Images/tyler-nix-511669-unsplash.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  margin: 4%;
+  /* border: 2px solid #282c34; */
+  opacity: 0.95;
+  border-radius: 50%;
+}
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #282c34;
+}
+
+.header {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 4em;
+}
+
+.sub-header {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 3em;
+}
+
+.nav-box {
+  margin: 0 auto;
+  width: 80%;
+  height: 10%;
+  background-color: #F2F2F2;
+  border: 2px solid #282c34;
+  opacity: 0.8;
+}
+.nav-text {
+  font-size: 1.2em;
+  font-weight: bolder;
+  text-decoration: none;
+  /* margin: 2%; */
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #282c34;
+  letter-spacing: 8px;
+}
+
+.nav-text:hover {
+  text-decoration: underline;
+}
+
+nav {
+  margin: 6% 10% 2% 10%;
+  letter-spacing: 4px;
+  font-size: 1.6em;
+  color: #282c34;
+}
+
+.main {
+  margin: 6% 5% 2% 5%;
+  /* width: 100%; */
+  height: 700px;
+  opacity: 0.8;
+  background-color: #F2F2F2;
+  color: #282c34;
+  overflow: scroll;
+}
+
+.text-box {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2em;
+  margin: 2% 6% 2% 6%;
+}
+
+.profile-nav-box {
+  margin-top: -5%;
+  font-size: 0.9em;
+}
+
+.profile-nav-text {
+  /* margin: 0 3% 0 3%; */
+  font-size: 1em;
+  color: #282c34;
+  text-decoration: none;
+}
+
+.profile-nav-text:hover {
+  text-decoration: underline;
+}
+
+.user-pic {
+  border-radius: 50%;
+  border: 2px solid #282c34;
+}
+
+.user-pic-main {
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.user-pic-small {
+  margin-top: 2%;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: right;
+  border: 2px solid #282c34;
+}
+.username-box {
+  margin-left: 2%;
+  text-align: left;
+}
+.username {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2em;
+  display: inline-block;
+  padding: 2%;
+}
+
+.logout {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2em;
+  color: #282c34;
+  display: inline-block;
+}
+
+.logout a {
+  color: #282c34;
+}
+
+input {
+  margin: 0 auto;
+  display: block;
+}
+
+form {
+  margin: 4%;
+}
+
+.country-name {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2em;
+}
+
+.country-link {
+  text-decoration: none;
+  color: #282c34;
+}
+
+.country-name:hover {
+  text-decoration: underline;
+}
+
+.back-btn {
+  font-size: 2em;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+.chart {
+  margin: 0 auto;
+}
+
+.business-pic {
+  border-radius: 50%;
+}
+
+.business-info {
+  font-size: 1.5em;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.method-name {
+  /* display: inline-block; */
+  text-decoration: none;
+  color: #282c34;
+  font-size: 1.5em;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.method-img {
+  margin: 0 auto;
+}
+
+.icon-box {
+  text-align: center;
+  border: 6px solid transparent;
+  margin: 2%;
+  display: inline-block;
+}
+
+.icon-box:hover{
+  border: 6px solid #282c34;
+}
+
+.icon-box:active{
+  border: 6px solid #282c34;
+}
+iframe{
+  margin: 20px;
+}
+
+.step-num {
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+
+.timer {
+  font-size: 4em;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    font-size: 0.8em;
+  }
+
+  .text-box {
+    font-size: 1em;
+  }
+
+  .user-pic-small {
+    margin-top: 2%;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: right;
+    height: 70px;
+    width: 70px;
+    border: 2px solid #282c34;
+  }
+
+  .username-box {
+    margin-left: 2%;
+    text-align: left;
+  }
+  .username {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1em;
+    display: inline-block;
+    padding: 2%;
+  }
+  
+  .logout {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1em;
+    color: #282c34;
+    display: inline-block;
+  }
+
+
+}
