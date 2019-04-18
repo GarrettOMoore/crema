@@ -3,10 +3,10 @@ import Timer from 'react-compound-timer'
 
 
 const Pour = (props) => {
-    let message = <span className='timer-instructions'>Start timer as soon as you add hot water.</span>  
+    let message = <span className='timer-instruction'>Start timer as soon as you add hot water.</span>  
     return(
         <>
-        <h1 className='header'>Pourover</h1>
+        <h1 className='header'>POUROVER</h1>
         <div className='timer'>
         <Timer startImmediately={false}
             checkpoints={[
@@ -30,8 +30,8 @@ const Pour = (props) => {
          {({ start, pause, stop, reset, timerState }) => (
         <>
             <div className='timer'>
-                <Timer.Minutes />
-                <Timer.Seconds />
+                <span className='min'><Timer.Minutes /></span>
+                <span className='sec'><Timer.Seconds /></span>
             </div>
             <br />
             {message}

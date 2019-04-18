@@ -2,10 +2,10 @@ import React from 'react'
 import Timer from 'react-compound-timer'
 
 const Chem = (props) => {
-    let message = <span className='timer-instructions'>Start timer as soon as you add hot water.</span>  
+    let message = <span className='timer-instruction'>Start timer as soon as you add hot water.</span>  
     return(
         <>
-        <h1 className='header'>Chemex</h1>
+        <h1 className='header'>CHEMEX</h1>
         <div className='timer'>
         <Timer startImmediately={false}
             checkpoints={[
@@ -29,8 +29,8 @@ const Chem = (props) => {
          {({ start, pause, stop, reset, timerState }) => (
         <>
             <div className='timer'>
-                <Timer.Minutes />
-                <Timer.Seconds />
+                <span className='min'><Timer.Minutes /></span>
+                <span className='sec'><Timer.Seconds /></span>
             </div>
             <br />
             {message}

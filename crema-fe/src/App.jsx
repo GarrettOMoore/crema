@@ -8,6 +8,7 @@ import Explore from './Pages/Explore'
 import Favorites from './Pages/Favorites'
 import SignUp from './Pages/SignUp'
 import Login from './Pages/Login'
+import Roasts from './Pages/Roasts'
 import Logo from './Images/Free_Sample_By_Wix (2).jpeg'
 
 
@@ -129,19 +130,21 @@ class App extends Component {
           <img className='logo'src={Logo} alt="logo" />
           <div className='nav-box'>
             <nav>
-              <Link className='nav-text'to='/about'>About</Link> | {' '}
+              <Link className='nav-text'to='/'>About</Link> | {' '}
               <Link className='nav-text'to='/explore'>Explore</Link> | {' '}
               <Link className='nav-text'to='/favorites'>Methods</Link> | {' '}
+              <Link className='nav-text'to='/roasts'>Roasts</Link> | {' '}
               <Link className='nav-text'to='/dashboard'>Dashboard</Link> | {' '}
               <Link className='nav-text'to='/login'>Log In</Link> | {' '}
               <Link className='nav-text'to='/signup'>Sign Up</Link>
             </nav>
           </div>
             {contents}
-            <Route exact path='/about' render={()=><About/>} />
+            <Route exact path='/' render={()=><About/>} />
             {/* <Route exact path='/history' render={()=><History/>} /> */}
             <Route exact path='/explore' render={()=><Explore data={this.state.data}/>} />
             <Route exact path='/favorites' render={()=><Favorites/>} />
+            <Route exact path='/roasts' render={()=><Roasts/>} />
             <Route exact path='/login' render={()=><Login liftToken={this.liftTokenToState}/>} />
             <Route exact path='/signup' render={()=><SignUp liftToken={this.liftTokenToState}/>} />
           </div>

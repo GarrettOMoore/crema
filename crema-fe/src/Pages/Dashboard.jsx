@@ -36,12 +36,12 @@ const Dashboard = (props) => {
           <div className='profile-nav-box'>
             <nav>
               <Link className='profile-nav-text'to='/savedplaylists'>Saved Playlists</Link> | {' '}
-              <Link className='profile-nav-text'to='/roasters'>Discover Local Roasters</Link> | {' '}
+              <Link className='profile-nav-text'to='/dashboard/roasters'>Discover Local Roasters</Link> | {' '}
               <Link className='profile-nav-text'to='/userprofile'>Profile</Link> | {' '}
             </nav>
             </div>
             <Route exact path='/savedplaylists' render={()=><SavedPlaylists/>} />
-            <Route exact path='/roasters' render={()=><Roasters location={props.user.city}/>} />
+            <Route exact path='/dashboard/roasters' render={()=><Roasters location={props.user.city}/>} />
             <Route exact path='/userprofile' render={()=><UserProfile user={props.user} />} />
             {/* <Route exact path='/updateprofile' render={()=><UpdateProfile user={props.user} />} /> */}
             {/* <Route exact path='/Favorites' render={()=><Favorites/>} /> */}

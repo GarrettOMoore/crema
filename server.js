@@ -18,6 +18,7 @@ app.use(express.json());
 app.use(helmet());
 app.use('/explore', require('./routes/data'));
 app.use('/businesses', require('./routes/businesses'));
+app.use('/profile', require('./routes/profile'));
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
