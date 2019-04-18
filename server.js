@@ -112,7 +112,7 @@ app.use('/locked',
 
 
 app.get('*', function(req, res) 
-{res.sendFile(__dirname + '/client/build/index.html')
+{res.sendFile(__dirname + '/crema-fe/build/index.html')
 });
 
 app.listen(process.env.PORT, () => {
