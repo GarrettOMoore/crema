@@ -5,10 +5,9 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import About from './Pages/About'
 import Dashboard from './Pages/Dashboard'
 import Explore from './Pages/Explore'
-import Favorites from './Pages/Favorites'
+import Methods from './Pages/Methods'
 import SignUp from './Pages/SignUp'
 import Login from './Pages/Login'
-import Roasts from './Pages/Roasts'
 import Logo from './Images/Free_Sample_By_Wix (2).jpeg'
 
 
@@ -132,7 +131,7 @@ class App extends Component {
             <nav>
               <Link className='nav-text'to='/'>About</Link> | {' '}
               <Link className='nav-text'to='/explore'>Explore</Link> | {' '}
-              <Link className='nav-text'to='/favorites'>Methods</Link> | {' '}
+              <Link className='nav-text'to='/methods'>Methods</Link> | {' '}
               {/* <Link className='nav-text'to='/roasts'>Roasts</Link> | {' '} */}
               <Link className='nav-text'to='/dashboard'>Dashboard</Link> | {' '}
               <Link className='nav-text'to='/login'>Log In</Link> | {' '}
@@ -142,8 +141,7 @@ class App extends Component {
             {contents}
             <Route exact path='/' render={()=><About/>} />
             <Route exact path='/explore' render={()=><Explore data={this.state.data}/>} />
-            <Route exact path='/favorites' render={()=><Favorites/>} />
-            {/* <Route exact path='/roasts' render={()=><Roasts/>} /> */}
+            <Route exact path='/methods' render={()=><Methods/>} />
             <Route exact path='/login' render={()=><Login liftToken={this.liftTokenToState}/>} />
             <Route exact path='/signup' render={()=><SignUp liftToken={this.liftTokenToState}/>} />
           </div>

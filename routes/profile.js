@@ -4,6 +4,7 @@ const Profile = require('../models/profile');
 
 router.post('/', (req, res) => {
 			let profile = new Profile ({
+				user_id: req.body.id,
 				roast: req.body.roast,
 				origin: req.body.origin,
 				method: req.body.method,
@@ -21,14 +22,16 @@ router.post('/', (req, res) => {
 		})
 	})
 
-router.get('/', (req, res) => {
-	Profile.findOne({userId: req.params.id}, (err, interests) => {
-		if (!err) {
-			res.status(200).json(interests)
-		} else {
-			res.status(500).json({err})
-		}
-	});
+router.get('/:id', (req, res) => {
+	console.log('htting the gettting')
+	Profile.find({user_id: req.params.id}, (err, interests) => {
+			console.log("In the caLLBack")
+			if (!err) {
+				res.status(200).json(interests)
+			} else {
+				res.status(500).json({err})
+			}
+		});
 	});
 
 module.exports = router;

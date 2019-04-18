@@ -29,7 +29,7 @@ class Roasters extends Component {
         let businesses = allRoasters.map((business)=> {
             return (
                 <>
-                <img className='business-pic'src={business.image_url}width={'100px'}height={'100px'}></img>
+                <img alt='business'className='business-pic'src={business.image_url}width={'100px'}height={'100px'}></img>
                 <p>{business.name}</p>
                 <p className='business-info'>{business.location.address1}</p>
                 <p className='business-info'>Phone: {business.phone}</p>

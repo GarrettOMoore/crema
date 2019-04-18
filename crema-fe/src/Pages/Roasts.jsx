@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
+import {Redirect, Route} from 'react-router-dom'
 import axios from 'axios'
 
 class Roasts extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            id: this.props.user._id,
             roast: '',
             origin: '',
             method: '',
@@ -28,6 +30,7 @@ class Roasts extends Component {
         e.preventDefault()
         console.log("IN SUBMIT")
         axios.post('/profile', {
+            id: this.state.id,
             roast: this.state.roast,
             origin: this.state.origin,
             method: this.state.method,
@@ -45,54 +48,51 @@ class Roasts extends Component {
                 artistthree: '',
                 genre: ''
             })
-          if (res.data.type === 'error') {
-            console.log('Error', res.data.message)
-          } else {
-              console.log('Success')
-          }
+            console.log("IN PROMISE")
+            this.props.history.push('/')
         })
       }
 
     render() {
     return(
         <div className='main'>
-        <h2 className='header'>Build Your Flavor + Music Profile:</h2>
+        <h2 className='sub-header'>Build Your Flavor + Music Profile:</h2>
         <form onSubmit={this.handleSubmit}>
             <p className='form-lbl'>Roast:</p>
           <select name='roast'onChange={this.handleChange}className='select'>
-            <option className='select-option'value="dark">Dark</option>
-            <option className='select-option'value="medium">Medium</option>
-            <option className='select-option'value="light">Light</option>
+            <option className='select-option'value="Dark">Dark</option>
+            <option className='select-option'value="Medium">Medium</option>
+            <option className='select-option'value="Light">Light</option>
           </select>
             <p className='form-lbl'>Origin:</p>
-          <select className='origin'onChange={this.handleChange}className='select'>
-            <option className='select-option'value="africa">African</option>
-            <option className='select-option'value="southamerica">South & Central American</option>
-            <option className='select-option'value="indonesian">Indonesian</option>
+          <select onChange={this.handleChange}className='select' name='origin'>
+            <option className='select-option'value="Africa">African</option>
+            <option className='select-option'value="South America">South & Central American</option>
+            <option className='select-option'value="Indonesian">Indonesian</option>
           </select>
           <p className='form-lbl'>Method:</p>
-          <select className='method'onChange={this.handleChange}className='select'>
-            <option className='select-option'value="frenchpress">French Press</option>
-            <option className='select-option'value="chemex">Chemex</option>
-            <option className='select-option'value="pourover">Pour Over</option>
-            <option className='select-option'value="aeropress">Aeropress</option>
+          <select onChange={this.handleChange}className='select' name='method'>
+            <option className='select-option'value="French Press">French Press</option>
+            <option className='select-option'value="Chemex">Chemex</option>
+            <option className='select-option'value="Pourover">Pour Over</option>
+            <option className='select-option'value="Aeropress">Aeropress</option>
           </select>
           <p className='form-lbl'>Three Favorite Artists:</p>
-            <input className='select-option'type='text' name='artistone'onChange={this.handleChange}placeholder="Bert Jansch"/>
-            <input className='select-option'type='text' name='artisttwo'onChange={this.handleChange}placeholder="Alice Coltrane"/>
-            <input className='select-option'type='text' name='artistthree'onChange={this.handleChange}placeholder="Ryuichi Sakamoto"/>
+            <input className='select-option'type='text' name='artistone'onChange={this.handleChange}placeholder="ex. Bert Jansch"/>
+            <input className='select-option'type='text' name='artisttwo'onChange={this.handleChange}placeholder="ex. Alice Coltrane"/>
+            <input className='select-option'type='text' name='artistthree'onChange={this.handleChange}placeholder="ex. Ryuichi Sakamoto"/>
           <p className='form-lbl'>Genre:</p>
-          <select className='genre'onChange={this.handleChange}className='select'>
-            <option className='select-option'value="jazz">Jazz</option>
-            <option className='select-option'value="rock">Rock & Roll</option>
-            <option className='select-option'value="folk">Folk</option>
-            <option className='select-option'value="blues">Blues</option>
-            <option className='select-option'value="hiphop">Hip Hop</option>
-            <option className='select-option'value="electronic">Electronic</option>
-            <option className='select-option'value="experimental">Experimental</option>
-            <option className='select-option'value="classical">Classical</option>
-            <option className='select-option'value="ambient">Ambient</option>
-            <option className='select-option'value="noise">Noise</option>
+          <select onChange={this.handleChange}className='select'name='genre'>
+            <option className='select-option'value="Jazz">Jazz</option>
+            <option className='select-option'value="Rock">Rock & Roll</option>
+            <option className='select-option'value="Folk">Folk</option>
+            <option className='select-option'value="Blues">Blues</option>
+            <option className='select-option'value="Hip Hop">Hip Hop</option>
+            <option className='select-option'value="Electronic">Electronic</option>
+            <option className='select-option'value="Experimental">Experimental</option>
+            <option className='select-option'value="Classical">Classical</option>
+            <option className='select-option'value="Ambient">Ambient</option>
+            <option className='select-option'value="Noise">Noise</option>
             <option className='select-option'value="Metal">Metal</option>
           </select>
           <button className='submit-btn'type='submit'>Submit</button>

@@ -135,6 +135,15 @@ nav {
   z-index: 2;
 }
 
+.data-header {
+  font-size: 2em;
+  text-decoration: underline;
+}
+.data {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3em;
+}
+
 .user-pic-small {
   margin-top: 2%;
   display: inline-block;
@@ -267,7 +276,7 @@ iframe{
 .select {
   width: 20%;
   margin: 2%;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 form {
   width: 100%;
@@ -276,15 +285,15 @@ input {
   font-family: 'Open Sans Condensed', sans-serif;
   border: 2px solid #282c34;
   margin: 0 auto;
-  font-size: 2em;
+  font-size: 1.5em;
   margin-top: 1em;
   padding: 1%;
-  width: 50%;
+  width: 30%;
 }
 .form-lbl {
   text-align: center;
   display: inline-block;
-  font-size: 3.2em;
+  font-size: 2.2em;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 button {

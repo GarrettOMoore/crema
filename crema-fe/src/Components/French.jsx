@@ -11,15 +11,15 @@ const French = (props) => {
         <Timer startImmediately={false}
             checkpoints={[
                 {
-                    time: 60000,
+                    time: 6000,
                     callback: () => message = <span className='timer-instruction'>Crack Crust and Stir!</span>,
                 },
                 {
-                    time: 70000,
+                    time: 17000,
                     callback: () => message = <span className='timer-instruction'>Now We Wait</span>,
                 },
                 {
-                    time: 240000,
+                    time: 24000,
                     callback: () => message = <span className='timer-instruction'>Your French Press is finished!</span>,
                 },
                 // {

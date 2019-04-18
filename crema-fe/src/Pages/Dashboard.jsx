@@ -1,31 +1,14 @@
-import React, {Component} from 'react'
+import React from 'react'
 import UserProfile from '../Components/UserProfile'
 import SavedPlaylists from '../Components/SavedPlaylists'
 import UpdateProfile from '../Components/UpdateProfile'
 import Roasters from '../Components/Roasters'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import Roasts from './Roasts'
-import axios from 'axios';
 
-let currentLocation;
 
 const Dashboard = (props) => {
-
-  // handleQuery = () => {
-  //   currentLocation = this.props.user.city;
-  //   axios.post('/businesses', {
-  //     location: currentLocation,
-  //  }).then((res)=> {
-  //    this.setState({
-  //      roasters: res.data.businesses
-  //    })
-  //   console.log(res);
-  //   console.log('SUCCESS')
-  // }).catch((err)=> {
-  //   console.log('ERROR')
-  //  })
-  // }
-
+    let user = Object.assign({}, props.user)
     return(
         <Router>
             <div className='main'>
@@ -43,7 +26,7 @@ const Dashboard = (props) => {
             </nav>
             </div>
             <Route exact path='/dashboard/savedplaylists' render={()=><SavedPlaylists/>} />
-            <Route exact path='/dashboard/tasteprofile' render={()=><Roasts/>} />
+            <Route exact path='/dashboard/tasteprofile' render={(props)=><Roasts user={user} {...props}/>} />
             <Route exact path='/dashboard/roasters' render={()=><Roasters location={props.user.city}/>} />
             <Route exact path='/dashboard/userprofile' render={()=><UserProfile user={props.user} />} />
             <Route exact path='/dashboard/updateprofile' render={()=><UpdateProfile user={props.user} />} />

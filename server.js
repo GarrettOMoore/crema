@@ -69,9 +69,11 @@ app.get('/UpdateProfile', (req, res) => {
     })
     .then(function(photo) {
       if (photo) {
-        res.render('user/profile', { photo: photo.link });
+        // res.render('user/profile', { photo: photo.link });
+        res.json({ photo: photo.link });
       } else {
-        res.render('user/profile', { photo: null });
+        // res.render('user/profile', { photo: null });
+        res.json({ photo: null });
       }
     });
 });

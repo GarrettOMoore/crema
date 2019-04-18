@@ -9,28 +9,28 @@ import Chem from '../Components/Chem'
 import Pour from '../Components/Pour'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
-const Favorites = (props) => {
+const Methods = (props) => {
     return(
         <Router>
         <div className='main'>
             <h1>Brew Methods</h1>
             <Link to='/frenchpress'><div className='icon-box'>
-                <img className='method-img'src={FrenchPic}/>
+                <img alt='french-press'className='method-img'src={FrenchPic}/>
                 <p className='method-name'>French Press </p>
             </div>
             </Link>
             <Link to='/aeropress'><div className='icon-box'>
-                <img className='method-img'src={AeroPic}/>
+                <img alt='aeropress'className='method-img'src={AeroPic}/>
                 <p className='method-name'>Aeropress </p>
             </div>
             </Link>
             <Link to='/chemex'><div className='icon-box'>
-                <img className='method-img'src={ChemexPic}/>
+                <img alt='chemex'className='method-img'src={ChemexPic}/>
                 <p className='method-name'>Chemex </p>
             </div>
             </Link>
             <Link to='/pourover'><div className='icon-box'>
-                <img className='method-img'src={PourPic}/>
+                <img alt='pourover'className='method-img'src={PourPic}/>
                 <p className='method-name'>Pour-Over </p>
             </div>
             </Link>
@@ -43,4 +43,4 @@ const Favorites = (props) => {
     )
 }
 
-export default Favorites
+export default Methods
