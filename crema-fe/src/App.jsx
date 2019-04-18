@@ -133,7 +133,7 @@ class App extends Component {
               <Link className='nav-text'to='/'>About</Link> | {' '}
               <Link className='nav-text'to='/explore'>Explore</Link> | {' '}
               <Link className='nav-text'to='/favorites'>Methods</Link> | {' '}
-              <Link className='nav-text'to='/roasts'>Roasts</Link> | {' '}
+              {/* <Link className='nav-text'to='/roasts'>Roasts</Link> | {' '} */}
               <Link className='nav-text'to='/dashboard'>Dashboard</Link> | {' '}
               <Link className='nav-text'to='/login'>Log In</Link> | {' '}
               <Link className='nav-text'to='/signup'>Sign Up</Link>
@@ -141,10 +141,9 @@ class App extends Component {
           </div>
             {contents}
             <Route exact path='/' render={()=><About/>} />
-            {/* <Route exact path='/history' render={()=><History/>} /> */}
             <Route exact path='/explore' render={()=><Explore data={this.state.data}/>} />
             <Route exact path='/favorites' render={()=><Favorites/>} />
-            <Route exact path='/roasts' render={()=><Roasts/>} />
+            {/* <Route exact path='/roasts' render={()=><Roasts/>} /> */}
             <Route exact path='/login' render={()=><Login liftToken={this.liftTokenToState}/>} />
             <Route exact path='/signup' render={()=><SignUp liftToken={this.liftTokenToState}/>} />
           </div>

@@ -269,7 +269,9 @@ iframe{
   margin: 2%;
   font-size: 2em;
 }
-
+form {
+  width: 100%;
+}
 input {
   font-family: 'Open Sans Condensed', sans-serif;
   border: 2px solid #282c34;
@@ -359,4 +361,31 @@ select {
     margin: 0 auto;
   }
 
+  .select {
+    margin: 0 auto;
+    border: 2px solid #282c34;
+    text-align: center;
+    font-size: 1em;
+    width: 60%;
+  }
+
+  select {
+    display: block;
+  }
+
+  form{
+    width: 80%;
+  }
+
+  input {
+    font-size: 1em;
+  }
+
+  .form-lbl {
+    font-size: 1em;
+  }
+
+  .submit-btn {
+    text-align: center;
+  }
 }

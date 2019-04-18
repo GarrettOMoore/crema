@@ -21,6 +21,14 @@ router.post('/', (req, res) => {
 		})
 	})
 
-
+router.get('/', (req, res) => {
+	Profile.findOne({userId: req.params.id}, (err, interests) => {
+		if (!err) {
+			res.status(200).json(interests)
+		} else {
+			res.status(500).json({err})
+		}
+	});
+	});
 
 module.exports = router;

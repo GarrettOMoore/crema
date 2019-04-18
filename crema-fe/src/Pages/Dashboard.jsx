@@ -4,6 +4,7 @@ import SavedPlaylists from '../Components/SavedPlaylists'
 import UpdateProfile from '../Components/UpdateProfile'
 import Roasters from '../Components/Roasters'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import Roasts from './Roasts'
 import axios from 'axios';
 
 let currentLocation;
@@ -35,15 +36,17 @@ const Dashboard = (props) => {
             </div>
           <div className='profile-nav-box'>
             <nav>
-              <Link className='profile-nav-text'to='/savedplaylists'>Saved Playlists</Link> | {' '}
+              <Link className='profile-nav-text'to='/dashboard/savedplaylists'>Saved Playlists</Link> | {' '}
+              <Link className='profile-nav-text' to='/dashboard/tasteprofile'>Taste Profile</Link> | {' '}
               <Link className='profile-nav-text'to='/dashboard/roasters'>Discover Local Roasters</Link> | {' '}
-              <Link className='profile-nav-text'to='/userprofile'>Profile</Link> | {' '}
+              <Link className='profile-nav-text'to='/dashboard/userprofile'>Profile</Link> | {' '}
             </nav>
             </div>
-            <Route exact path='/savedplaylists' render={()=><SavedPlaylists/>} />
+            <Route exact path='/dashboard/savedplaylists' render={()=><SavedPlaylists/>} />
+            <Route exact path='/dashboard/tasteprofile' render={()=><Roasts/>} />
             <Route exact path='/dashboard/roasters' render={()=><Roasters location={props.user.city}/>} />
-            <Route exact path='/userprofile' render={()=><UserProfile user={props.user} />} />
-            {/* <Route exact path='/updateprofile' render={()=><UpdateProfile user={props.user} />} /> */}
+            <Route exact path='/dashboard/userprofile' render={()=><UserProfile user={props.user} />} />
+            <Route exact path='/dashboard/updateprofile' render={()=><UpdateProfile user={props.user} />} />
             {/* <Route exact path='/Favorites' render={()=><Favorites/>} /> */}
             {/* <Route exact path='/Profile' render={()=><Profile/>} /> */}
           </div>

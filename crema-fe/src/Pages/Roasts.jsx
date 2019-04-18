@@ -60,40 +60,40 @@ class Roasts extends Component {
         <form onSubmit={this.handleSubmit}>
             <p className='form-lbl'>Roast:</p>
           <select name='roast'onChange={this.handleChange}className='select'>
-            <option value="dark">Dark</option>
-            <option value="medium">Medium</option>
-            <option value="light">Light</option>
+            <option className='select-option'value="dark">Dark</option>
+            <option className='select-option'value="medium">Medium</option>
+            <option className='select-option'value="light">Light</option>
           </select>
             <p className='form-lbl'>Origin:</p>
-          <select name='origin'onChange={this.handleChange}className='select'>
-            <option value="africa">African</option>
-            <option value="southamerica">South & Central American</option>
-            <option value="indonesian">Indonesian</option>
+          <select className='origin'onChange={this.handleChange}className='select'>
+            <option className='select-option'value="africa">African</option>
+            <option className='select-option'value="southamerica">South & Central American</option>
+            <option className='select-option'value="indonesian">Indonesian</option>
           </select>
           <p className='form-lbl'>Method:</p>
-          <select name='method'onChange={this.handleChange}className='select'>
-            <option value="frenchpress">French Press</option>
-            <option value="chemex">Chemex</option>
-            <option value="pourover">Pour Over</option>
-            <option value="aeropress">Aeropress</option>
+          <select className='method'onChange={this.handleChange}className='select'>
+            <option className='select-option'value="frenchpress">French Press</option>
+            <option className='select-option'value="chemex">Chemex</option>
+            <option className='select-option'value="pourover">Pour Over</option>
+            <option className='select-option'value="aeropress">Aeropress</option>
           </select>
           <p className='form-lbl'>Three Favorite Artists:</p>
-            <input type='text' name='artistone'onChange={this.handleChange}placeholder="Bert Jansch"/>
-            <input type='text' name='artisttwo'onChange={this.handleChange}placeholder="Alice Coltrane"/>
-            <input type='text' name='artistthree'onChange={this.handleChange}placeholder="Ryuichi Sakamoto"/>
+            <input className='select-option'type='text' name='artistone'onChange={this.handleChange}placeholder="Bert Jansch"/>
+            <input className='select-option'type='text' name='artisttwo'onChange={this.handleChange}placeholder="Alice Coltrane"/>
+            <input className='select-option'type='text' name='artistthree'onChange={this.handleChange}placeholder="Ryuichi Sakamoto"/>
           <p className='form-lbl'>Genre:</p>
-          <select name='genre'onChange={this.handleChange}className='select'>
-            <option value="jazz">Jazz</option>
-            <option value="rock">Rock & Roll</option>
-            <option value="folk">Folk</option>
-            <option value="blues">Blues</option>
-            <option value="hiphop">Hip Hop</option>
-            <option value="electronic">Electronic</option>
-            <option value="experimental">Experimental</option>
-            <option value="classical">Classical</option>
-            <option value="ambient">Ambient</option>
-            <option value="noise">Noise</option>
-            <option value="Metal">Metal</option>
+          <select className='genre'onChange={this.handleChange}className='select'>
+            <option className='select-option'value="jazz">Jazz</option>
+            <option className='select-option'value="rock">Rock & Roll</option>
+            <option className='select-option'value="folk">Folk</option>
+            <option className='select-option'value="blues">Blues</option>
+            <option className='select-option'value="hiphop">Hip Hop</option>
+            <option className='select-option'value="electronic">Electronic</option>
+            <option className='select-option'value="experimental">Experimental</option>
+            <option className='select-option'value="classical">Classical</option>
+            <option className='select-option'value="ambient">Ambient</option>
+            <option className='select-option'value="noise">Noise</option>
+            <option className='select-option'value="Metal">Metal</option>
           </select>
           <button className='submit-btn'type='submit'>Submit</button>
         </form>
