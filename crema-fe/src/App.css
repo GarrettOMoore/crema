@@ -44,8 +44,15 @@ html {
 .logo {
   margin: 4%;
   /* border: 2px solid #282c34; */
-  opacity: 0.95;
+  opacity: 0.9;
   border-radius: 50%;
+  width: 26em;
+  height: 26em;
+}
+
+.logo-two {
+  width: 12em;
+  height: 15em;
 }
 h1 {
   font-size: 3em;

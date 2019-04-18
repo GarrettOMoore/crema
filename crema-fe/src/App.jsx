@@ -8,7 +8,7 @@ import Explore from './Pages/Explore'
 import Methods from './Pages/Methods'
 import SignUp from './Pages/SignUp'
 import Login from './Pages/Login'
-import Logo from './Images/Free_Sample_By_Wix (2).jpeg'
+import Logo from './Images/blackonwhitelogo.png'
 
 
 
@@ -142,8 +142,8 @@ class App extends Component {
             <Route exact path='/' render={()=><About/>} />
             <Route exact path='/explore' render={()=><Explore data={this.state.data}/>} />
             <Route exact path='/methods' render={()=><Methods/>} />
-            <Route exact path='/login' render={()=><Login liftToken={this.liftTokenToState}/>} />
-            <Route exact path='/signup' render={()=><SignUp liftToken={this.liftTokenToState}/>} />
+            <Route exact path='/login' render={(props)=><Login liftToken={this.liftTokenToState}{...props}/>} />
+            <Route exact path='/signup' render={(props)=><SignUp liftToken={this.liftTokenToState}{...props}/>} />
           </div>
       </Router>
     );

@@ -13,6 +13,7 @@ const cloudinaryStorage = require('multer-storage-cloudinary');
 
 const app = express();
 
+app.use(express.static(__dirname + '/crema-fe/build'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(helmet());
@@ -50,7 +51,7 @@ const signupLimiter = new RateLimit ({
 	message: 'Maximum accounts created. Please try again later.'
 })
 
-mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
 const db = mongoose.connection;
 
 db.once('open', () => {
@@ -108,6 +109,11 @@ app.use('/locked',
   expressJWT({secret: process.env.JWT_SECRET})
 		.unless({method: 'POST'}), 
 		  require('./routes/locked'));
+
+
+app.get('*', function(req, res) 
+{res.sendFile(__dirname + '/client/build/index.html')
+});
 
 app.listen(process.env.PORT, () => {
 	console.log(` 💰🎃💰 You are spinning on Port ${process.env.PORT} 💰🎃💰`)

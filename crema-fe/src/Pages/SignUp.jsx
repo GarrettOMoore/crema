@@ -66,6 +66,7 @@ class SignUp extends Component {
         } else {
             localStorage.setItem('mernToken', res.data.token)
             this.props.liftToken(res.data);
+            this.props.history.push('/')
         }
       }).catch( err => {
           // This block catches the rate limiters.

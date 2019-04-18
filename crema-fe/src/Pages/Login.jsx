@@ -42,11 +42,12 @@ class Login extends Component {
           } else {
               localStorage.setItem('mernToken', res.data.token)
               this.props.liftToken(res.data)
+              this.props.history.push('/')
           }
       }).catch( err => {
         console.log("got an error back from axios:")
           this.setState({
-              message: err.response.message
+              message: err
           })
       })
   }
