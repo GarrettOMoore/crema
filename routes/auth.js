@@ -57,7 +57,7 @@ router.post('/login', (req, res) => {
 					expiresIn: "1d"
 				});
 				// Return the token.
-				console.log("made token, responding...")
+				console.log("made token, responding...", token)
 				res.json({type: 'success', user: user.toObject(), token})
 			} else {
 				console.log('problem with authentication!')

@@ -6,10 +6,16 @@ const About = (props) => {
         <div className='main'>
         <h1>About</h1>
         <div className='text-box'>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto sed sunt veritatis modi voluptates dolore excepturi laboriosam eum commodi. Exercitationem accusamus eum quis sequi reiciendis cupiditate sapiente enim deleniti fugit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis quaerat saepe, harum commodi quisquam ducimus pariatur in velit nobis, sit eaque voluptatibus dolor obcaecati, earum quam odit impedit distinctio rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit incidunt consequuntur sint repellendus. Dolore omnis quibusdam quasi minima? Quos aliquid quas voluptas et, repellat ducimus eveniet possimus iste neque vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam officiis est laborum suscipit fuga dignissimos non ipsum doloremque nesciunt nisi nihil distinctio voluptatibus minus, rerum blanditiis unde hic quae dolor.</p>
+        <p className='sub-header'>For Coffee and Music lovers everywhere</p>
+        <p className='about-text'>Crema aims to provide a place you can use not only as a reference for making or talking about coffee - but a place where you can check out the best local roasters, and hear curated playlists based on your individual tastes.</p>
         <img className='logo-two' alt='logo'src={LogoTwo}/>
         </div>
-        <iframe title="spotify-player"src="https://open.spotify.com/embed/user/robertgarrettmoore/playlist/0Y1gWWwsTXNnso9CMlErOy" width="600" height="380" frameBorder="0" allowtransparency="true"></iframe>
+        {/* <iframe title="spotify-player"src="https://open.spotify.com/embed/user/robertgarrettmoore/playlist/0Y1gWWwsTXNnso9CMlErOy" width="600" height="380" frameBorder="0" allowtransparency="true"></iframe> */}
+        <p className='footer-text'>Created by Garrett Moore 2019</p>
+        <p className='footer-text'>With:</p>
+        <p className='footer-text'>Brew Methods from Stumptown Coffee</p>
+        <p className='footer-text'>Coffee Production data from the ICO</p>
+        <p className='footer-text'>Local Roaster Search from the Yelp Fusion API</p>
         </div>
     )
 }

@@ -51,24 +51,31 @@ html {
 }
 
 .logo-two {
+  margin-top: 5%;
   width: 12em;
   height: 15em;
+  margin-bottom: 5%;
+}
+
+.about-text {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.7em;
 }
 h1 {
   font-size: 3em;
   font-weight: 700;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Amatic SC', cursive;
   color: #282c34;
 }
 
 .header {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Amatic SC', cursive;
   font-size: 4em;
 }
 
 .sub-header {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 3em;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
 }
 
 .nav-box {
@@ -111,11 +118,15 @@ nav {
 }
 
 .text-box {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Amatic SC', cursive;
   font-size: 2em;
   margin: 2% 6% 2% 6%;
 }
 
+.footer-text {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.8em;
+}
 .profile-nav-box {
   margin-top: -2%;
   font-size: 0.9em;
@@ -163,14 +174,14 @@ nav {
   text-align: left;
 }
 .username {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Amatic SC', cursive;
   font-size: 2em;
   display: inline-block;
   padding: 2%;
 }
 
 .logout {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Amatic SC', cursive;
   font-size: 2em;
   color: #282c34;
   display: inline-block;
@@ -190,7 +201,7 @@ form {
 }
 
 .country-name {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Amatic SC', cursive;
   font-size: 2em;
 }
 
@@ -205,7 +216,7 @@ form {
 
 .back-btn {
   font-size: 2em;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Amatic SC', cursive;
 }
 
 .back-btn:hover {
@@ -222,7 +233,7 @@ form {
 
 .business-info {
   font-size: 1.5em;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Amatic SC', cursive;
 }
 
 .method-name {
@@ -230,7 +241,7 @@ form {
   text-decoration: none;
   color: #282c34;
   font-size: 1.5em;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Amatic SC', cursive;
 }
 
 .method-img {
@@ -289,7 +300,7 @@ form {
   width: 100%;
 }
 input {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Amatic SC', cursive;
   border: 2px solid #282c34;
   margin: 0 auto;
   font-size: 1.5em;
@@ -301,7 +312,7 @@ input {
   text-align: center;
   display: inline-block;
   font-size: 2.2em;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Amatic SC', cursive;
 }
 button {
   background: none;
@@ -316,14 +327,14 @@ button:hover {
 }
 
 select {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Amatic SC', cursive;
 }
 
 .submit-btn {
-  font-size: 5em;
+  font-size: 3em;
   margin: 0 auto;
-  width: 5em;
-  height: 3em;
+  width: 4em;
+  height: 2em;
   display: block;
 }
 @media screen and (max-width: 600px) {
