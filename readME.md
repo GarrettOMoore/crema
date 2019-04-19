@@ -9,16 +9,13 @@
 
 # User Stories:
 
-    “I'm an avid coffee drinker, but I have yet to really branch out from my normal 
-    Folgers drip.“
+    “I'm an avid coffee drinker, but I have yet to really branch out from starbucks and instant coffee.“
 
-    “I have a taste for good coffee, but I don't really know the different regions that 
-    it comes from. “
+    “I have a taste for good coffee, but I don't really know the different regions that it comes from. “
 
     “I want a one stop shop for help making coffee with the most popular brewing methods.”
 
-    "I love to listen to good music while I drink my coffee on a lazy day off. I just don't 
-    know what to listen to."
+    "I love to listen to good music while I drink my coffee on a lazy day off. I just don't know what to listen to."
 
 
 # Technologies Used:
@@ -72,7 +69,17 @@
 
 # Extra Functionality
 
-    My partner, who has worked in the coffee industry for some time, mentioned how nice it would be to have specific timers that the user can use when they want to implement the directions laid out for specific brewing methods. After messing around with a few different libraries, as well as writing my own timers - I found React-Compound-Timer, which was perfect for what I wanted to do. It very easily enabled me to write my own alerts at certain intervals - adding a nice element to an otherwise boring feature. For each brew method - the timer will output the current step in the brew process as it's required from the start time.
+    My partner, who has worked in the coffee industry for 
+    some time, mentioned how nice it would be to have specific 
+    timers that the user can use when they want to implement 
+    the directions laid out for specific brewing methods. After 
+    messing around with a few different libraries, as well as 
+    writing my own timers - I found React-Compound-Timer, which 
+    was perfect for what I wanted to do. It very easily enabled
+    me to write my own alerts at certain intervals - adding a
+    nice element to an otherwise boring feature. For each brew
+    method - the timer will output the current step in the brew
+    process as it's required from the start time.
 
 ![alt-text](https://imgur.com/TVcYnwn.png, "Timer Code")
 
