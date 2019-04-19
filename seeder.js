@@ -2045,9 +2045,7 @@ let newData = data.filter( obj => {
     }
 })
 
-// console.log(newData)
 Data.insertMany(newData, (err, data) => {
-  console.log( err ? err : "seeding successful")	
   process.exit()
 });
 

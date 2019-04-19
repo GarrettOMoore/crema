@@ -17,10 +17,8 @@ class Roasters extends Component {
          this.setState({
            roasters: res.data.businesses
          })
-        console.log(res);
-        console.log('SUCCESS')
+
       }).catch((err)=> {
-        console.log('ERROR')
        })
     }
     

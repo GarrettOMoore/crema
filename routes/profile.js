@@ -23,9 +23,7 @@ router.post('/', (req, res) => {
 	})
 
 router.get('/:id', (req, res) => {
-	console.log('htting the gettting')
 	Profile.find({user_id: req.params.id}, (err, interests) => {
-			console.log("In the caLLBack")
 			if (!err) {
 				res.status(200).json(interests)
 			} else {

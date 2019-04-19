@@ -52,7 +52,6 @@ class SignUp extends Component {
     }
 
     handleSubmit(e)  {
-      console.log("hitting signup submit")
       e.preventDefault();
       axios.post('/auth/signup', {
           name: this.state.name,
@@ -62,7 +61,6 @@ class SignUp extends Component {
           state: this.state.state
       }).then( res => {
         if (res.data.type === 'error') {
-          console.log('errorrrr: errrrrooorrrrrrr', res.data.message)
         } else {
             localStorage.setItem('mernToken', res.data.token)
             this.props.liftToken(res.data);

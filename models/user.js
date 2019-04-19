@@ -58,11 +58,7 @@ userSchema.set('toObject', {
 });
 
 userSchema.methods.authenticated = function (password) {
-	console.log("Trying to auth this user:", this);
-	console.log("password is:", password);
-	console.log("hash is:", this.password);
 	var foo = bcrypt.compareSync(password, this.password);
-	console.log("passwords match:", foo);
 	return foo;
 };
 

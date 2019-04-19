@@ -21,7 +21,6 @@ class UserProfile extends Component {
         let user = Object.assign({},this.props.user)
         axios.get(`/profile/${user._id}`).then( res => {
         let data = res.data.map((interest)=>{
-            console.log(interest.roast)
             this.setState({
             roast: interest.roast,
             origin: interest.origin,

@@ -37,30 +37,23 @@ router.post('/signup', (req, res) => {
 
 // Route for login
 router.post('/login', (req, res) => {
-	console.log("THIS IS THE SUBMITTED PASSWORD!",req.body.password)
 	// Find user in database.
 	User.findOne({
 		email: req.body.email
 	}, (err, user) => {
-		console.log("in User.findOne callback...")
   	// If no user - Return error.
 		if (!user) {
-			console.log("there is no user")
 			res.json({type: 'error', message: 'Account not found'})
 	} else {
 			// If user - Check authentication.
-			console.log("there is a user, authenticating")
 			if ( user.authenticated(req.body.password) )	{
-				console.log("authenticated, making token...")
 				// If authenticated - Sign in token. <-- Login step.
 				var token = jwt.sign(user.toObject(), process.env.JWT_SECRET, {
 					expiresIn: "1d"
 				});
 				// Return the token.
-				console.log("made token, responding...", token)
 				res.json({type: 'success', user: user.toObject(), token})
 			} else {
-				console.log('problem with authentication!')
 				res.status(401).json({type: 'error', message: 'Authentication failure' })
 			}
 	  }

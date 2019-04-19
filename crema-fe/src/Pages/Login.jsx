@@ -28,13 +28,11 @@ class Login extends Component {
   }
 
   handleSubmit(e) {
-      console.log("Submit Login")
       e.preventDefault();
       axios.post('/auth/login', {
           email: this.state.email,
           password: this.state.password
       }).then( res => {
-        console.log("got a response from axios")
           if (res.data.type === 'error') {
             this.setState({
                 message: res.data.message
@@ -45,7 +43,6 @@ class Login extends Component {
               this.props.history.push('/')
           }
       }).catch( err => {
-        console.log("got an error back from axios:")
           this.setState({
               message: err
           })

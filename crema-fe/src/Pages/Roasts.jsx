@@ -28,7 +28,6 @@ class Roasts extends Component {
     handleSubmit(e) {
         e.stopPropagation()
         e.preventDefault()
-        console.log("IN SUBMIT")
         axios.post('/profile', {
             id: this.state.id,
             roast: this.state.roast,
@@ -48,7 +47,6 @@ class Roasts extends Component {
                 artistthree: '',
                 genre: ''
             })
-            console.log("IN PROMISE")
             this.props.history.push('/')
         })
       }

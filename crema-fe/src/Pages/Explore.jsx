@@ -15,7 +15,6 @@ class Explore extends Component {
 }
 
     handleClick(country){
-        console.log(country.country)
        this.setState({
            country: country.country,
            2014: country['2014'],
@@ -27,7 +26,6 @@ class Explore extends Component {
     }
 
     handleBackBtn(){
-        console.log("in back btn func");
         this.setState({
             country: null,
             2014: null,
@@ -52,7 +50,9 @@ class Explore extends Component {
         name = this.state.country
         data = (
             <>
-            <ShowData one={this.state['2014']}
+            <ShowData 
+            className='data-vis'
+            one={this.state['2014']}
             two={this.state['2015']}
             three={this.state['2016']}
             four={this.state['2017']}

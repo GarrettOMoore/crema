@@ -70,9 +70,7 @@ class App extends Component {
   }
 
   liftTokenToState ({token, user}) {
-    console.log("INSIDE LIFT TOKEN");
-    console.log(token)
-    console.log(user)
+ 
     this.setState({
       token: token,
       user: user
