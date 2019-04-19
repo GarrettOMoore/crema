@@ -95,7 +95,7 @@ app.post('/UpdateProfile', parser.single('myFile'), (req, res) => {
       if (err) console.log('ERROR: =====> ', err);
       //Save to DB
       user.save((err, user) => {
-       res.status(200);
+       res.redirect('/dashboard')
       });
     }
   ).catch((err) => console.log(err));
