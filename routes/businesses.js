@@ -3,7 +3,6 @@ const router = express.Router();
 const axios = require('axios');
 const Data = require('../models/data');
 
-// Meetup API
 router.post('/', (req,res) => {
   axios.get(`https://api.yelp.com/v3/businesses/search?location=${req.body.location}`, {
     headers: {

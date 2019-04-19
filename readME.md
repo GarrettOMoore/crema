@@ -54,6 +54,32 @@
     I had to do a fair amount of filtering before I could save anything to my DB, 
     or render it to the page. I decided to stick with data from the past five years.
 
+![alt-text](https://imgur.com/NBX23A4.png "Coffee Data")
+
+***
+
+    The Yelp Fusion API made it extremely easy to look up roasteries in a users logged in location. 
+    Since the user has logged in their location, there is no need for them to type any specific query - 
+    I've hardcoded 'coffee roasteries' into the search already.
+
+![alt-text](https://imgur.com/m1yHnhM.png, "API call")
+
+***
+
+# Extra Functionality
+
+    My partner, who has worked in the coffee industry for some time, mentioned how nice it would be to have specific timers that the user can use when they want to implement the directions laid out for specific brewing methods. After messing around with a few different libraries, as well as writing my own timers - I found React-Compound-Timer, which was perfect for what I wanted to do. It very easily enabled me to write my own alerts at certain intervals - adding a nice element to an otherwise boring feature. For each brew method - the timer will output the current step in the brew process as it's required from the start time.
+
+![alt-text](https://imgur.com/TVcYnwn.png, "Timer Code")
+
+***
+
+![alt-text](https://imgur.com/0u5NPxU.png, "Screen Shot of Timer Page")
+
+
+***
+
+# Planning
 ![alt-text](https://imgur.com/bjYqUM8.png "Trello")
 
 On Sunday 4/13, I started to sketch out and plan what I thought I'd need to do. 

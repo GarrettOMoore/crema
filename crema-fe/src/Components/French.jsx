@@ -21,11 +21,7 @@ const French = (props) => {
                 {
                     time: 24000,
                     callback: () => message = <span className='timer-instruction'>Your French Press is finished!</span>,
-                },
-                // {
-                //     time: 241000,
-                //     callback: stop()
-                // }
+                }
             ]}>
          {({ start, pause, stop, reset, timerState }) => (
         <>
