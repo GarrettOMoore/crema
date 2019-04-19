@@ -39,8 +39,8 @@ class UserProfile extends Component {
     return(
         <>
         <img className='user-pic-main'src={this.props.user.image} width={'200px'}height={'200px'}alt='user' />
-        <p>{this.props.user.name}</p>
-        <p>{this.props.user.city}, {this.props.user.state}</p>
+        <p className='profile-text'>{this.props.user.name}</p>
+        <p className='profile-text'>{this.props.user.city}, {this.props.user.state}</p>
         <p className='header'>Your Taste Profile:</p>
         <p className='data-header'>Roast: </p>
         <p className='data'>{this.state.roast}</p>

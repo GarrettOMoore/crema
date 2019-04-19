@@ -127,6 +127,12 @@ nav {
   font-family: 'Amatic SC', cursive;
   font-size: 1.8em;
 }
+
+.profile-text {
+  font-size: 2.5em;
+  font-family: 'Amatic SC', cursive;
+}
+
 .profile-nav-box {
   margin-top: -2%;
   font-size: 0.9em;

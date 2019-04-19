@@ -58,6 +58,10 @@
 
 ***
 
+![alt-text](https://imgur.com/sJdPnBN.png, "Coffee Graph")
+
+***
+
     The Yelp Fusion API made it extremely easy to look up roasteries in a users logged in location. 
     Since the user has logged in their location, there is no need for them to type any specific query - 
     I've hardcoded 'coffee roasteries' into the search already.
@@ -97,6 +101,8 @@ have some tweaking to do, but it's most of the way there.
 I'd like to fully incorporate Spotify into Crema as soon as possible. The Spotify OAuth 
 was a bit more than I could deal with for such a short window, but that will certainly 
 be high on the list of things to add soon. I'd like for users to be able to save playlists, share created playlists associated with certain coffees & moods.
+
+I would also like to add a bit more user interactivity to this project. Ability to send messages (or chat), recommendations (music & coffee), etc.
 
 ![alt-text](https://imgur.com/pz7OyAF.png, "Desktop View Main")
 
