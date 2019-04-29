@@ -54,47 +54,47 @@ class Roasts extends Component {
     render() {
     return(
         <div className='main'>
-        <h2 className='sub-header'>Build Your Flavor + Music Profile:</h2>
-        <form onSubmit={this.handleSubmit}>
+          <h2 className='sub-header'>Build Your Flavor + Music Profile:</h2>
+          <form onSubmit={this.handleSubmit}>
             <p className='form-lbl'>Roast:</p>
-          <select name='roast'onChange={this.handleChange}className='select'>
-            <option className='select-option'value="Dark">Dark</option>
-            <option className='select-option'value="Medium">Medium</option>
-            <option className='select-option'value="Light">Light</option>
-          </select>
+            <select name='roast'onChange={this.handleChange}className='select'>
+              <option className='select-option'value="Dark">Dark</option>
+              <option className='select-option'value="Medium">Medium</option>
+              <option className='select-option'value="Light">Light</option>
+            </select>
             <p className='form-lbl'>Origin:</p>
-          <select onChange={this.handleChange}className='select' name='origin'>
-            <option className='select-option'value="Africa">African</option>
-            <option className='select-option'value="South America">South & Central American</option>
-            <option className='select-option'value="Indonesian">Indonesian</option>
-          </select>
-          <p className='form-lbl'>Method:</p>
-          <select onChange={this.handleChange}className='select' name='method'>
-            <option className='select-option'value="French Press">French Press</option>
-            <option className='select-option'value="Chemex">Chemex</option>
-            <option className='select-option'value="Pourover">Pour Over</option>
-            <option className='select-option'value="Aeropress">Aeropress</option>
-          </select>
-          <p className='form-lbl'>Three Favorite Artists:</p>
+            <select onChange={this.handleChange}className='select' name='origin'>
+              <option className='select-option'value="Africa">African</option>
+              <option className='select-option'value="South America">South & Central American</option>
+              <option className='select-option'value="Indonesian">Indonesian</option>
+            </select>
+            <p className='form-lbl'>Method:</p>
+            <select onChange={this.handleChange}className='select' name='method'>
+              <option className='select-option'value="French Press">French Press</option>
+              <option className='select-option'value="Chemex">Chemex</option>
+              <option className='select-option'value="Pourover">Pour Over</option>
+              <option className='select-option'value="Aeropress">Aeropress</option>
+            </select>
+            <p className='form-lbl'>Three Favorite Artists:</p>
             <input className='select-option'type='text' name='artistone'onChange={this.handleChange}placeholder="ex. Bert Jansch"/>
             <input className='select-option'type='text' name='artisttwo'onChange={this.handleChange}placeholder="ex. Alice Coltrane"/>
             <input className='select-option'type='text' name='artistthree'onChange={this.handleChange}placeholder="ex. Ryuichi Sakamoto"/>
-          <p className='form-lbl'>Genre:</p>
-          <select onChange={this.handleChange}className='select'name='genre'>
-            <option className='select-option'value="Jazz">Jazz</option>
-            <option className='select-option'value="Rock">Rock & Roll</option>
-            <option className='select-option'value="Folk">Folk</option>
-            <option className='select-option'value="Blues">Blues</option>
-            <option className='select-option'value="Hip Hop">Hip Hop</option>
-            <option className='select-option'value="Electronic">Electronic</option>
-            <option className='select-option'value="Experimental">Experimental</option>
-            <option className='select-option'value="Classical">Classical</option>
-            <option className='select-option'value="Ambient">Ambient</option>
-            <option className='select-option'value="Noise">Noise</option>
-            <option className='select-option'value="Metal">Metal</option>
-          </select>
-          <button className='submit-btn'type='submit'>Submit</button>
-        </form>
+            <p className='form-lbl'>Genre:</p>
+            <select onChange={this.handleChange}className='select'name='genre'>
+              <option className='select-option'value="Jazz">Jazz</option>
+              <option className='select-option'value="Rock">Rock & Roll</option>
+              <option className='select-option'value="Folk">Folk</option>
+              <option className='select-option'value="Blues">Blues</option>
+              <option className='select-option'value="Hip Hop">Hip Hop</option>
+              <option className='select-option'value="Electronic">Electronic</option>
+              <option className='select-option'value="Experimental">Experimental</option>
+              <option className='select-option'value="Classical">Classical</option>
+              <option className='select-option'value="Ambient">Ambient</option>
+              <option className='select-option'value="Noise">Noise</option>
+              <option className='select-option'value="Metal">Metal</option>
+            </select>
+            <button className='submit-btn'type='submit'>Submit</button>
+          </form>
         </div>
     )
   }

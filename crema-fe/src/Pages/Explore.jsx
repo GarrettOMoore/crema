@@ -43,7 +43,7 @@ class Explore extends Component {
         name = null;
         data = this.props.data.map((country)=> {
             return (
-            <p onClick={()=> this.handleClick(country)} className='country-name'>{country.country}</p>
+            	<p onClick={()=> this.handleClick(country)} className='country-name'>{country.country}</p>
             )
         })
     } else {
@@ -51,12 +51,12 @@ class Explore extends Component {
         data = (
             <>
             <ShowData 
-            className='data-vis'
-            one={this.state['2014']}
-            two={this.state['2015']}
-            three={this.state['2016']}
-            four={this.state['2017']}
-            five={this.state['2018']}
+            	className='data-vis'
+            	one={this.state['2014']}
+            	two={this.state['2015']}
+            	three={this.state['2016']}
+            	four={this.state['2017']}
+            	five={this.state['2018']}
             />
 
             <p>1 === 1,000 60kg Bags</p>

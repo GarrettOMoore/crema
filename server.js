@@ -62,7 +62,6 @@ db.on('error', (error) => {
 	console.log(`Database Error:\n ${error}`)
 })
 
-
 app.get('/UpdateProfile', (req, res) => {
   db.user
     .findOne({
@@ -70,10 +69,8 @@ app.get('/UpdateProfile', (req, res) => {
     })
     .then(function(photo) {
       if (photo) {
-        // res.render('user/profile', { photo: photo.link });
         res.json({ photo: photo.link });
       } else {
-        // res.render('user/profile', { photo: null });
         res.json({ photo: null });
       }
     });
@@ -100,6 +97,29 @@ app.post('/UpdateProfile', parser.single('myFile'), (req, res) => {
     }
   ).catch((err) => console.log(err));
 });
+
+app.post('/UpdateProfileInfo', (req, res) => {
+  User.findByIdAndUpdate(
+    req.body.userId,
+    {
+      $set: { 
+        city: req.body.city,
+        state: req.body.state,
+        zip: req.body.zip
+       }
+    },
+    { new: true },
+    (err, user) => {
+      if (err) console.log('ERROR: =====> ', err);
+      //Save to DB
+      user.save((err, user) => {
+      if(err) console.log('ERROR: =====>' , err);
+       res.redirect('/dashboard/profile')
+      });
+    }
+  ).catch((err) => console.log(err));
+});
+
 
 app.use('/auth/login', loginLimiter);
 app.use('/auth/signup', signupLimiter);

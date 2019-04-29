@@ -27,12 +27,12 @@ class Roasters extends Component {
         let businesses = allRoasters.map((business)=> {
             return (
                 <>
-                <img alt='business'className='business-pic'src={business.image_url}width={'100px'}height={'100px'}></img>
-                <p>{business.name}</p>
-                <p className='business-info'>{business.location.address1}</p>
-                <p className='business-info'>Phone: {business.phone}</p>
-                <p className='business-info'>{business.location.city},{business.location.state}</p>
-                <p className='business-info'>Rating: {business.rating}</p>
+                	<img alt='business'className='business-pic'src={business.image_url}width={'100px'}height={'100px'}></img>
+                	<p>{business.name}</p>
+                	<p className='business-info'>{business.location.address1}</p>
+                	<p className='business-info'>Phone: {business.phone}</p>
+                	<p className='business-info'>{business.location.city},{business.location.state}</p>
+                	<p className='business-info'>Rating: {business.rating}</p>
                 </>
             )
         })
@@ -40,7 +40,7 @@ class Roasters extends Component {
 
     return(
         <div className='sub-main'>
-            <h1 className='header'>Roasters in: {this.props.location}</h1>
+          <h1 className='header'>Roasters in: {this.props.location}</h1>
            {businesses}
         </div>
         )
